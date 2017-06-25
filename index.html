@@ -1,39 +1,64 @@
 <!DOCTYPE html>
-
 <html>
-
-<head>
+  <head>
     <meta charset="UTF-8">
+
+    <!--browser optimization for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    
-    <!--main sylesheet-->
-    <link rel="stylesheet"
-	  type = "text/css"
-	  href="css/base.css">
-    
-    <!-- fonts -->
+
+    <!--icons-->
+    <link rel="stylesheet" ref="http://fonts.googleapis.com/icon?family=Material+Icons">
+      
+    <!--fonts-->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto">
 
-    
+    <!--css reset-->
+    <link rel="stylesheet" type = "text/css" href="css/normalize.css">
 
-</head>
+    <!--materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen, projection"/>
 
-<body>
-    <div class="topnav" id="navbar">
-	<a href="#home">Alex Bie</a>
-	<a href="#about">About</a>
-	<a href="#projects">Projects</a>
-	<a href="resume.pdf">Resume</a>
+    <!--main stylesheet-->
+    <link rel="stylesheet" type = "text/css" href="css/base.css">
+	 
+    <title>Alex Bie</title>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <a href="#home" id="name-link">alex bie</a>
+      <ul class="navbar-right">
+	<li><a href="#about">About</a></li>
+	<li><a href="#projects">Projects</a></li>
+	<li><a href="res/resume.pdf">Resume</a></li>
+      </ul>
+    </nav>
+
+    <div class="section" id="home">
+      <h3>Home</h3>
+      <p> Hello world this is my static page </p>
     </div>
 
+    <div class="section" id="about">
+      <h3>About</h3>
+      <p> Hello world this is my static page </p>
+    </div>
 
-    <div id="home"></div>
+    <div class="section" id="projects">
+      <h3>Projects</h3>
+      <p> Hello world this is my static page </p>
+    </div>
 
-    <div id="about"></div>
+    <div class="section" id="footer">
+      <p> Hello world this is my static page </p>
+    </div>
 
-    <div id="projects"></div>
+    <!-- plugins -->
+    <script type="text/javascript" src="js/jquery-3.2.1.js"</script>
+    <script type="text/javascript" src="js/materialize.js"</script>
 
-    <div id="footer"></div>
-
-</body>
+    <!-- custom js-->
+    <script src="js/index.js"></script>
+  </body>
 </html>
