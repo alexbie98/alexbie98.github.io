@@ -13,45 +13,47 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto">
 
-    <!--css reset-->
-    <link rel="stylesheet" type = "text/css" href="css/normalize.css">
-
-    <!--materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen, projection"/>
-
-    <!--main stylesheet-->
-    <link rel="stylesheet" type = "text/css" href="css/base.css">
+    <!--sass-generated stylesheet with materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/styles.css" media="screen, projection"/>
 	 
     <title>Alex Bie</title>
   </head>
 
   <body>
-    <nav class="navbar">
-      <a href="#home" id="name-link">alex bie</a>
-      <ul class="navbar-right">
-	<li><a href="#about">About</a></li>
-	<li><a href="#projects">Projects</a></li>
-	<li><a href="res/resume.pdf">Resume</a></li>
-      </ul>
+    <nav>
+      <div class="nav-wrapper">
+	<a href="/" id="name-link" class="brand-logo">alex bie</a>
+	<ul id="nav-menu" class="right hide-on-med-and-down">
+	  <li><a href="#about">About</a></li>
+	  <li><a href="#projects">Projects</a></li>
+	  <li><a href="res/resume.pdf">Resume</a></li>
+	</ul>
+      </div>
     </nav>
 
-    <div class="section" id="home">
+    <div class="container" id="home">
       <h3>Home</h3>
-      <p> Hello world this is my static page </p>
+      <p>Hello world, this is my static page.</p>
     </div>
 
-    <div class="section" id="about">
+    <div class="divider"></div>
+
+    <div class="container" id="about">
       <h3>About</h3>
-      <p> Hello world this is my static page </p>
+      <p>Hello world, my name is Alex.</p>
     </div>
 
-    <div class="section" id="projects">
+    <div class="divider"></div>
+
+    <div class="container" id="projects">
       <h3>Projects</h3>
-      <p> Hello world this is my static page </p>
+      <p>Hello world, these are my cool projects.</p>
     </div>
+
+    <div class="divider"></div>
 
     <div class="section" id="footer">
-      <p> Hello world this is my static page </p>
+      <p>This was a great page.</p>
     </div>
 
     <!-- plugins -->
@@ -60,5 +62,6 @@
 
     <!-- custom js-->
     <script src="js/index.js"></script>
+
   </body>
 </html>

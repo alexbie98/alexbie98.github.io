@@ -1,14 +1,18 @@
+
+// main style sheet for the site
+// using sass preprocessor + materialize.css
+
 @charset "UTF-8";
 
 // Mixins
-@import "components/mixins";
+//@import "components/mixins";
 @import "components/color";
-
-// Variables;
-@import "components/variables";
 
 // Reset
 @import "components/normalize";
+
+// Variables;
+@import "components/variables";
 
 // components
 @import "components/global";
@@ -30,7 +34,7 @@
 @import "components/collapsible";
 @import "components/chips";
 @import "components/materialbox";
-@import "components/forms/forms";
+@import "component/forms/forms";
 @import "components/table_of_contents";
 @import "components/sideNav";
 @import "components/preloader";
@@ -41,3 +45,33 @@
 @import "components/date_picker/default";
 @import "components/date_picker/default.date";
 @import "components/date_picker/default.time";
+
+// name-logo
+#name-link {
+    font-family: Ubuntu Mono;
+}
+
+// set blue
+nav {
+  opacity: 0.5;
+}
+
+.nav-wrapper {
+  @extend .grey;
+}
+
+#home {
+    height: 500px;
+}
+
+#about {
+    height: 500px;
+}
+
+#projects {
+    height: 500px;
+}
+
+#footer {
+    height: 100px;
+}
