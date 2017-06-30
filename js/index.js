@@ -1,3 +1,6 @@
 // javascript file with helper scripts for the site
 
-var string = "hello";
+
+function displayToast(){
+  Materialize.toast("i am a toast message", 4000);
+}
