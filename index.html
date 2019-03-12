@@ -2,37 +2,95 @@
 <html>
   <head>
     <meta charset="UTF-8">
+
     <!--fonts-->
 		<link rel="stylesheet" href="fonts/Sans/cmun-sans.css"></link>
 
+    <!--style-->
 		<style type="text/css">
+
+			/* basic*/
 			body {
-				margin:40px auto;
+				margin:30px auto;
 				max-width:650px;
-				line-height:1.6;
 				font-size:18px;
 				color:#444;
-				padding:10px
 			}
-			h1,h2,h3 {
-				line-height:1.2
+
+			/* links */
+			a:link {
+				text-decoration: none;
+			}
+			a:visited {
+				text-decoration: none;
+			}
+			a:hover {
+				text-decoration: underline;
+			}
+			a:active {
+				text-decoration: underline;
+			}
+
+			/* spacing */
+			hr {
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}
+			h1 {
+				display: inline;
+				margin-left: 12px;
+			}
+			h3 {
+				margin-top: 15px;
+				margin-bottom: -10px;
+				color:#888;
+				font-weight:normal;
+			}
+			p + ul {
+				margin-top: -15px;
+			}
+			li {
+				line-height: 20pt;
+			}
+			ul + p {
+				margin-top: -12px;
 			}
 		</style>
 
+    <title>Alex Bie</title>
 
-    <title>Alex Bie's Website</title>
   </head>
 
   <body style="font-family: 'Computer Modern Sans'">
 
-		<h1> Alex Bie's Website </h1>
-
-		<p> Hey, welcome to my website. I'll be posting some writeups about
-		projects I'm working on and probably my resume here too. </p>
-
-		<p> Stay tuned. </p>
-
 		<hr>
 
+		<div>
+			<img src="me.jpg" height="128" style="vertical-align:middle">
+			<h1> Alex Bie </h1>
+		</div>
+
+		<h3> Computer science undergrad at 
+			<a href="https://www.uwaterloo.ca">UWaterloo</a> 
+			(graduating 2021) </h3>
+		<p>Here are links to my: </p>
+
+		<ul>
+			<li><a href="https://www.github.com/alexbie98">Github</a>;</li>
+			<li><a href="https://www.linkedin.com/in/alexbie98">LinkedIn</a>; and</li>
+			<li><a href="resume.pdf">Resume</a> (updated March 2019). </li>
+		</ul>
+
+		<p>You can reach me at 
+			<script type="text/javascript">
+				// thwart email scraper
+				domain = 'uwaterloo.ca'
+				email = 'yabie' + '@' + domain
+				document.write('<a href="mailto:' + email + '">' + email + '</a>.')
+			</script>
+		</p>
+
+		<hr>
   </body>
+
 </html>
