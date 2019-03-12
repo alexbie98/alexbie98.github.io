@@ -1,2 +1,1 @@
-# alexbie98.github.io
-My personal page.
+<https://alexbie98.github.io>
