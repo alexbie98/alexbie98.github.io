@@ -2,8 +2,8 @@
 <html>
   <head>
     <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<meta name="viewport" content="width=device-width, initial-scale=0.9">
 
     <!--fonts-->
 		<link rel="stylesheet" href="fonts/Sans/cmun-sans.css"></link>
@@ -14,9 +14,16 @@
 			/* basic*/
 			body {
 				margin:30px auto;
-				max-width:650px;
+				max-width:675px;
 				font-size:18px;
 				color:#444;
+			}
+
+			@media (max-width: 675px) {
+				body {
+					margin: 25px; /* Adds a 20px margin on all sides */
+					max-width: none; /* Allows the body to adjust to the padding */
+				}
 			}
 
 			/* links */
@@ -68,9 +75,13 @@
 
 		<hr>
 
-		<div>
-			<img src="bie23.jpeg" height="350px" style="vertical-align:middle">
-			<h1 style="margin-left: 40px;">Alex Bie </h1>
+		<div style="display: table; width: 100%;">
+			<div style="display: table-cell; vertical-align: middle;">
+				<img src="bie23.jpeg" height="300">
+			</div>
+			<div style="display: table-cell; vertical-align: middle; text-align: center; width: 100%;">
+				<h1>Alex Bie</h1>
+			</div>
 		</div>
 
 
