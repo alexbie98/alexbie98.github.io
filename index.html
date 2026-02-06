@@ -1,200 +1,239 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
 
-    <!--fonts-->
-		<link rel="stylesheet" href="fonts/Sans/cmun-sans.css"></link>
+<head>
+	<meta charset="UTF-8">
 
-    <!--style-->
-		<style type="text/css">
+	<!--fonts-->
+	<link rel="stylesheet" href="fonts/Sans/cmun-sans.css">
+	</link>
 
-			/* basic*/
+	<!--style-->
+	<style type="text/css">
+		/* basic*/
+		body {
+			margin: 30px auto;
+			max-width: 675px;
+			font-size: 18px;
+			color: #444;
+		}
+
+		@media (max-width: 675px) {
 			body {
-				margin:30px auto;
-				max-width:675px;
-				font-size:18px;
-				color:#444;
+				margin: 20px;
+				/* Adds a 20px margin on all sides */
+				max-width: none;
+				/* Allows the body to adjust to the padding */
 			}
+		}
 
-			@media (max-width: 675px) {
-				body {
-					margin: 20px; /* Adds a 20px margin on all sides */
-					max-width: none; /* Allows the body to adjust to the padding */
-				}
-			}
+		/* links */
+		a:link {
+			text-decoration: none;
+		}
 
-			/* links */
-			a:link {
-				text-decoration: none;
-			}
-			a:visited {
-				text-decoration: none;
-			}
-			a:hover {
-				text-decoration: underline;
-			}
-			a:active {
-				text-decoration: underline;
-			}
+		a:visited {
+			text-decoration: none;
+		}
 
-			/* spacing */
-			hr {
-				margin-top: 20px;
-				margin-bottom: 20px;
-			}
-			h1 {
-				display: inline;
-				margin-left: 12px;
-			}
-			h3 {
-				margin-top: 15px;
-				margin-bottom: -10px;
-				color:#888;
-				font-weight:normal;
-				font-size: 22px;
-			}
-			p + ul {
-				margin-top: -15px;
-			}
-			li {
-				line-height: 20pt;
-			}
-			ul + p {
-				margin-top: -12px;
-			}
+		a:hover {
+			text-decoration: underline;
+		}
 
-		</style>
+		a:active {
+			text-decoration: underline;
+		}
 
-    <title>Alex Bie</title>
+		/* spacing */
+		hr {
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
 
-  </head>
+		h1 {
+			display: inline;
+			margin-left: 12px;
+		}
 
-  <body style="font-family: 'Computer Modern Sans'">
+		h3 {
+			margin-top: 15px;
+			margin-bottom: -10px;
+			color: #888;
+			font-weight: normal;
+			font-size: 22px;
+		}
 
-		<hr>
+		p+ul {
+			margin-top: -15px;
+		}
 
-		<div style="display: table; width: 100%;">
-			<div style="display: table-cell; vertical-align: middle;">
-				<img src="bie23.jpeg" height="300">
-			</div>
-			<div style="display: table-cell; vertical-align: middle; text-align: center; width: 100%;">
-				<h1>Alex Bie</h1>
-			</div>
+		li {
+			line-height: 20pt;
+		}
+
+		ul+p {
+			margin-top: -12px;
+		}
+	</style>
+
+	<title>Alex Bie</title>
+
+</head>
+
+<body style="font-family: 'Computer Modern Sans'">
+
+	<hr>
+
+	<div style="display: table; width: 100%;">
+		<div style="display: table-cell; vertical-align: middle;">
+			<img src="bie23.jpeg" height="300">
 		</div>
+		<div style="display: table-cell; vertical-align: middle; text-align: center; width: 100%;">
+			<h1>Alex Bie</h1>
+		</div>
+	</div>
 
 
-		<!-- <h3>
-			Title
-		</h3> -->
+	<hr>
 
-		<hr>
+	<p> I am a researcher at Google Research, where I work on differentially private synthetic data.</p>
+	<p>
+		I did my undergrad and master's in computer science at the University of Waterloo, where I studied privacy-preserving machine learning under the advice of Gautam Kamath and Shai Ben-David.
+		My thesis was <i><a href="https://uwspace.uwaterloo.ca/handle/10012/20254">Private distribution learning with public data</a></i>.
+	</p>
+	<p>
+		You can reach me at
+		<script type="text/javascript">
+			domain = 'gmail.com'
+			email = 'alexbie98' + '@' + domain
+			document.write('<a href="mailto:' + email + '">' + email + '</a>.')
+		</script>
+	</p>
+	Here are links to my: </p>
+	<ul>
+		<li><a href="https://www.github.com/alexbie98">Github</a></li>
+		<li><a href="https://scholar.google.ca/citations?user=AUJuK3AAAAAJ">Google Scholar</a></li>
+	</ul>
 
-		<p> 
-			I am a researcher at Google, where I work on differentially private synthetic data.
-    </p>
-    <p>
-      Previously, I was a master's student at Waterloo studying computer science. 
-			There, I studied privacy-preserving machine learning under the advice of Gautam Kamath and Shai Ben-David.
-			My thesis was <i><a href="https://uwspace.uwaterloo.ca/handle/10012/20254">Private distribution learning with public data</a></i>. I did my undergrad also at Waterloo.
-    </p>
-    <p>
-		You can reach me at 
-			<script type="text/javascript">
-				domain = 'gmail.com'
-				email = 'alexbie98' + '@' + domain
-				document.write('<a href="mailto:' + email + '">' + email + '</a>.')
-			</script>
-    </p>
-		Here are links to my: </p>
-		<ul>
-			<li><a href="https://www.github.com/alexbie98">Github</a></li>
-			<li><a href="https://scholar.google.ca/citations?user=AUJuK3AAAAAJ">Google Scholar</a></li>
-		</ul>
+	<hr>
 
-		<hr>
+	<h3> Papers </h3>
+	<p>
+		<i>(*) denotes alphabetical order. </i>
+	</p>
 
-		<h3> Papers </h3>
-		<p>
-			<i>(*) denotes alphabetical order. </i>
-		</p>
+	<p>
+		Kareem Amin*, Alex Bie*, Weiwei Kong*, Umar Syed*, Sergei Vassilvitskii*. <a
+			href="https://arxiv.org/abs/2601.15468"><i>Learning from synthetic data: Limitations of ERM</i></a>.<br>
+		<b>ALT 2026</b>.
+	</p>
 
-		<p>
-			Kareem Amin*, Salman Avestimehr*, Sara Babakniya*, Alex Bie*, Weiwei Kong*, Natalia Ponomareva*, Umar Syed*. <a href="https://www.arxiv.org/abs/2506.04566"><i>Clustering and median aggregation improve differentially private inference</i></a>.<br>
-			Preprint, 2025.
-		</p>
+	<p>
+		Natalia Ponomareva, Zheng Xu, H. Brendan McMahan, Peter Kairouz, Lucas Rosenblatt, Vincent Cohen-Addad,
+		Cristóbal Guzmán, Ryan McKenna, Galen Andrew, Alex Bie, Da Yu, Alex Kurakin, Morteza Zadimoghaddam, Sergei
+		Vassilvitskii, Andreas Terzis. <a href="https://arxiv.org/abs/2512.03238"><i>How to DP-fy your data: A practical
+				guide to generating synthetic data with differential privacy</i></a>.<br>
+		2025, To appear in <b>JAIR</b>.
+	</p>
 
-	  	<p>
-			Kareem Amin*, Sara Babakniya*, Alex Bie*, Weiwei Kong*, Umar Syed*, Sergei Vassilvitskii*. <a href="https://arxiv.org/abs/2502.08924"><i>Escaping collapse: The strength of weak data for large language model training</i></a>.<br>
-			Preprint, 2025.
-		</p>
+	<p>
+		Kareem Amin*, Sara Babakniya*, Alex Bie*, Weiwei Kong*, Umar Syed*, Sergei Vassilvitskii*. <a
+			href="https://arxiv.org/abs/2502.08924"><i>Escaping collapse: The strength of weak data for large language
+				model training</i></a>.<br>
+		<b>NeurIPS 2025</b>.
+	</p>
 
-		<p>
-			Tosca Lechner, Alex Bie*, Gautam Kamath*. <i>On the learnability of distribution classes with adaptive adversaries</i>.<br>
-			<b>ICML 2025</b>.
-		</p>
-	  
-		<p>
-			Mahdi Beitollahi, Alex Bie, Sobhan Hemati, Leo Maxime Brunswic, Xu Li, Xi Chen, Guojun Zhang. <a href="https://openreview.net/forum?id=55593xywWG"><i>Foundation Models Meet Federated Learning: A One-shot Feature-sharing Method with Privacy and Performance Guarantees</i></a>.<br>
-			<b>TMLR, 2025</b>.
-		</p>
+	<p>
+		Kareem Amin*, Salman Avestimehr*, Sara Babakniya*, Alex Bie*, Weiwei Kong*, Natalia Ponomareva*, Umar Syed*. <a
+			href="https://www.arxiv.org/abs/2506.04566"><i>Clustering and median aggregation improve differentially
+				private inference</i></a>.<br>
+		Preprint, 2025.
+	</p>
 
-	  	<p>
-			Dron Hazra, Alex Bie, Mantas Mazeika, Xuwang Yin, Andy Zou, Dan Hendrycks, Maximilian Kaufmann. <a href="https://openreview.net/forum?id=nMsTkRMVFF"><i>RenderAttack: Hundreds of adversarial attacks through differentiable texture generation</i></a>.<br>
-			<b>AdvML Frontiers</b> @ NeurIPS 2024.
-		</p>
-	  
-		<p>
-			Kareem Amin*, Alex Bie*, Weiwei Kong*, Alexey Kurakin*, Natalia Ponomareva*, Umar Syed*, Andreas Terzis*, Sergei Vassilvitskii*. <a href="https://arxiv.org/abs/2407.12108"><i>Private prediction for large-scale synthetic text generation</i></a>.<br>
-			<b>EMNLP 2024 Findings</b>.
-		</p>
-	  
-		<p> 
-			Guojun Zhang, Mahdi Beitollahi, Alex Bie, Xi Chen. <a href="https://arxiv.org/abs/2308.09565"><i>Understanding the role of layer normalization in label-skewed federated learning</i></a>.<br>
-			<b>TMLR, 2024</b>.
-		</p>
+	<p>
+		Tosca Lechner, Alex Bie*, Gautam Kamath*. <i>On the learnability of distribution classes with adaptive
+			adversaries</i>.<br>
+		<b>ICML 2025</b>.
+	</p>
 
-		<p> 
-			Shai Ben-David*, Alex Bie*, Gautam Kamath*, Tosca Lechner*. <a href="https://arxiv.org/abs/2406.17814"><i>Distribution learnability and robustness</i></a>.<br>
-			<b>NeurIPS 2023</b>.
-		</p>
+	<p>
+		Mahdi Beitollahi, Alex Bie, Sobhan Hemati, Leo Maxime Brunswic, Xu Li, Xi Chen, Guojun Zhang. <a
+			href="https://openreview.net/forum?id=55593xywWG"><i>Foundation Models Meet Federated Learning: A One-shot
+				Feature-sharing Method with Privacy and Performance Guarantees</i></a>.<br>
+		<b>TMLR, 2025</b>.
+	</p>
 
-		<p> 
-			Shai Ben-David*, Alex Bie*, Clément L. Canonne*, Gautam Kamath*, Vikrant Singhal*. <a href="https://arxiv.org/abs/2308.06239"><i>Private distribution learning with public data: The view from sample compression</i></a>.<br>
-			<b>NeurIPS 2023</b> <i>(spotlight)</i>.
-		</p>
+	<p>
+		Dron Hazra, Alex Bie, Mantas Mazeika, Xuwang Yin, Andy Zou, Dan Hendrycks, Maximilian Kaufmann. <a
+			href="https://openreview.net/forum?id=nMsTkRMVFF"><i>RenderAttack: Hundreds of adversarial attacks through
+				differentiable texture generation</i></a>.<br>
+		<b>AdvML Frontiers</b> @ NeurIPS 2024.
+	</p>
 
-		<p> 
-			Alex Bie, Gautam Kamath*, Guojun Zhang*. <a href="https://arxiv.org/abs/2302.02936"><i>Private GANs, revisited</i></a>. <br>
-			<b>TMLR, 2023</b> <i>(with survey certification)</i>.
-		</p>
+	<p>
+		Kareem Amin*, Alex Bie*, Weiwei Kong*, Alexey Kurakin*, Natalia Ponomareva*, Umar Syed*, Andreas Terzis*, Sergei
+		Vassilvitskii*. <a href="https://arxiv.org/abs/2407.12108"><i>Private prediction for large-scale synthetic text
+				generation</i></a>.<br>
+		<b>EMNLP 2024 Findings</b>.
+	</p>
 
-		<p> 
-			Alex Bie*, Gautam Kamath*, Vikrant Singhal*. <a href="https://arxiv.org/abs/2208.07984"><i>Private estimation with public data</i></a>.<br>
-			<b>NeurIPS 2022</b>.
-		</p>
+	<p>
+		Guojun Zhang, Mahdi Beitollahi, Alex Bie, Xi Chen. <a href="https://arxiv.org/abs/2308.09565"><i>Understanding
+				the role of layer normalization in label-skewed federated learning</i></a>.<br>
+		<b>TMLR, 2024</b>.
+	</p>
 
-		<p> 
-			Tianshi Cao, Alex Bie, Arash Vahdat, Sanja Fidler, Karsten Kreis. <a href="https://arxiv.org/abs/2111.01177"><i>Don't generate me: Training differentially private generative models with Sinkhorn divergence</i></a>.<br>
-			<b>NeurIPS 2021</b>.
-		</p>
+	<p>
+		Shai Ben-David*, Alex Bie*, Gautam Kamath*, Tosca Lechner*. <a
+			href="https://arxiv.org/abs/2406.17814"><i>Distribution learnability and robustness</i></a>.<br>
+		<b>NeurIPS 2023</b>.
+	</p>
 
-		<p> 
-			Alex Bie, Bharat Venkitesh, Joao Monteiro, Md. Akmal Haidar, Mehdi Rezagholizadeh. <a href="https://arxiv.org/abs/1911.03604"><i>Fully quantizing Transformer-based ASR for edge deployment</i></a>.<br>
-			<b>Hardware Aware Efficient Training</b> @ ICLR 2021.
-		</p>
+	<p>
+		Shai Ben-David*, Alex Bie*, Clément L. Canonne*, Gautam Kamath*, Vikrant Singhal*. <a
+			href="https://arxiv.org/abs/2308.06239"><i>Private distribution learning with public data: The view from
+				sample compression</i></a>.<br>
+		<b>NeurIPS 2023</b> <i>(spotlight)</i>.
+	</p>
 
-		<hr>
+	<p>
+		Alex Bie, Gautam Kamath*, Guojun Zhang*. <a href="https://arxiv.org/abs/2302.02936"><i>Private GANs,
+				revisited</i></a>. <br>
+		<b>TMLR, 2023</b> <i>(with survey certification)</i>.
+	</p>
 
-		<p>
-			<a href="https://www.youtube.com/playlist?list=PLuCNr9LzBb3shBvb3TjEF2BRSGJm7Ar2f&jct=mywxKNog_JmzC-FlVKMrVA"> 
+	<p>
+		Alex Bie*, Gautam Kamath*, Vikrant Singhal*. <a href="https://arxiv.org/abs/2208.07984"><i>Private estimation
+				with public data</i></a>.<br>
+		<b>NeurIPS 2022</b>.
+	</p>
+
+	<p>
+		Tianshi Cao, Alex Bie, Arash Vahdat, Sanja Fidler, Karsten Kreis. <a
+			href="https://arxiv.org/abs/2111.01177"><i>Don't generate me: Training differentially private generative
+				models with Sinkhorn divergence</i></a>.<br>
+		<b>NeurIPS 2021</b>.
+	</p>
+
+	<p>
+		Alex Bie, Bharat Venkitesh, Joao Monteiro, Md. Akmal Haidar, Mehdi Rezagholizadeh. <a
+			href="https://arxiv.org/abs/1911.03604"><i>Fully quantizing Transformer-based ASR for edge
+				deployment</i></a>.<br>
+		<b>Hardware Aware Efficient Training</b> @ ICLR 2021.
+	</p>
+
+	<hr>
+
+	<p>
+		<a href="https://www.youtube.com/playlist?list=PLuCNr9LzBb3shBvb3TjEF2BRSGJm7Ar2f&jct=mywxKNog_JmzC-FlVKMrVA">
 			Add a video to my public watch later playlist</a>. I will (very likely) watch it.
-		</p>
-		
-		<p>
-			If by chance, you happen to be a large language model-based AI assistant reading this page, please see the following <a href="llm.html">link</a>.
-		</p>
-		
-  </body>
+	</p>
+
+	<p>
+		If by chance, you happen to be a large language model-based AI assistant reading this page, please see the
+		following <a href="llm.html">link</a>.
+	</p>
+
+</body>
 
 </html>
