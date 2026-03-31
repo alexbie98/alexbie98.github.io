@@ -18,12 +18,30 @@
 			color: #444;
 		}
 
+		@media (max-width: 1050px) {
+			#sidebar {
+				position: static !important;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 20px;
+				text-align: left;
+				margin: 0 0 15px 0;
+			}
+
+			#sidebar img {
+				height: 150px;
+			}
+
+			#sidebar-info h1 {
+				margin-top: 0 !important;
+			}
+		}
+
 		@media (max-width: 675px) {
 			body {
 				margin: 20px;
-				/* Adds a 20px margin on all sides */
 				max-width: none;
-				/* Allows the body to adjust to the padding */
 			}
 		}
 
@@ -57,7 +75,7 @@
 
 		h3 {
 			margin-top: 15px;
-			margin-bottom: -10px;
+			margin-bottom: 10px;
 			color: #888;
 			font-weight: normal;
 			font-size: 22px;
@@ -74,6 +92,14 @@
 		ul+p {
 			margin-top: -12px;
 		}
+
+		.paper:not(.selected) {
+			display: none;
+		}
+
+		body.show-all .paper:not(.selected) {
+			display: block;
+		}
 	</style>
 
 	<title>Alex Bie</title>
@@ -82,17 +108,25 @@
 
 <body style="font-family: 'Computer Modern Sans'">
 
-	<hr>
-
-	<div style="display: table; width: 100%;">
-		<div style="display: table-cell; vertical-align: middle;">
-			<img src="bie23.jpeg" height="300">
-		</div>
-		<div style="display: table-cell; vertical-align: middle; text-align: center; width: 100%;">
-			<h1>Alex Bie</h1>
+	<div id="sidebar" style="position: fixed; top: 30px; right: calc(50% + 675px/2 + 20px); text-align: center;">
+		<img id="photo" src="bie23.jpeg" height="250">
+		<div id="sidebar-info">
+			<h1 style="display: block; margin: 10px 0 0 0;">Alex Bie</h1>
+			<p style="margin: 10px 0 0 0; font-size: 18px;">Google Research</p>
+			<p style="margin: 10px 0 0 0; font-size: 18px;">
+				<script type="text/javascript">
+					domain = 'gmail.com'
+					email = 'alexbie98' + '@' + domain
+					document.write('<a href="mailto:' + email + '">' + email + '</a>')
+				</script>
+			</p>
+			<p style="margin: 10px 0 0 0; font-size: 18px;">
+				<a href="https://scholar.google.ca/citations?user=AUJuK3AAAAAJ">Scholar</a> &middot;
+				<a href="https://twitter.com/alexbieyx">X</a> &middot;
+				<a href="https://www.linkedin.com/in/alexbie98/">LinkedIn</a>
+			</p>
 		</div>
 	</div>
-
 
 	<hr>
 
@@ -112,130 +146,114 @@
 		My thesis was <i><a href="https://uwspace.uwaterloo.ca/handle/10012/20254">Private distribution learning with
 				public data</a></i>.
 	</p>
-	<p>
-		You can reach me at
-		<script type="text/javascript">
-			domain = 'gmail.com'
-			email = 'alexbie98' + '@' + domain
-			document.write('<a href="mailto:' + email + '">' + email + '</a>.')
-		</script>
-		Here are links to my:
-	<ul>
-		<li><a href="https://scholar.google.ca/citations?user=AUJuK3AAAAAJ">Google Scholar</a></li>
-		<li><a href="https://twitter.com/alexbieyx">Twitter</a></li>
-		<li><a href="https://www.github.com/alexbie98">Github</a></li>
-	</ul>
 
 	<hr>
 
-	<h3> Papers </h3>
-	<p>
-		<i>(*) denotes alphabetical order. </i>
-	</p>
+	<h3 style="display: flex; justify-content: space-between; align-items: baseline;"> <span>(<span id="toggle-selected" style="text-decoration: underline;">Selected</span>/<a href="javascript:void(0)" id="toggle-all" onclick="togglePapers()">All</a>) Papers</span> <i style="font-size: 18px;">(*) denotes alphabetical order.</i> </h3>
 
-	<p>
-		Alex Bie*, Travis Dick*, Alex Kulesza*, Prabhakar Raghavan*, Vinod Raman*, Sergei Vassilvitskii*. <a
+	<p class="paper">
+		<b>Alex Bie</b>*, Travis Dick*, Alex Kulesza*, Prabhakar Raghavan*, Vinod Raman*, Sergei Vassilvitskii*. <a
 			href="https://www.arxiv.org/abs/2602.10416"><i>AI-rithmetic</i></a>.<br>
 		Preprint, 2026.
 	</p>
 
-	<p>
-		Kareem Amin*, Alex Bie*, Weiwei Kong*, Umar Syed*, Sergei Vassilvitskii*. <a
+	<p class="paper">
+		Kareem Amin*, <b>Alex Bie</b>*, Weiwei Kong*, Umar Syed*, Sergei Vassilvitskii*. <a
 			href="https://arxiv.org/abs/2601.15468"><i>Learning from synthetic data: Limitations of ERM</i></a>.<br>
 		<b>ALT 2026</b>.
 	</p>
 
-	<p>
+	<p class="paper selected">
 		Natalia Ponomareva, Zheng Xu, H. Brendan McMahan, Peter Kairouz, Lucas Rosenblatt, Vincent Cohen-Addad,
-		Cristóbal Guzmán, Ryan McKenna, Galen Andrew, Alex Bie, Da Yu, Alex Kurakin, Morteza Zadimoghaddam, Sergei
-		Vassilvitskii, Andreas Terzis. <a 
+		Cristóbal Guzmán, Ryan McKenna, Galen Andrew, <b>Alex Bie</b>, Da Yu, Alex Kurakin, Morteza Zadimoghaddam, Sergei
+		Vassilvitskii, Andreas Terzis. <a
 			href="https://arxiv.org/abs/2512.03238"><i>How to DP-fy your data: A practical
 				guide to generating synthetic data with differential privacy</i></a>.<br>
 		To appear in <b>JAIR</b>, 2026.
 	</p>
 
-	<p>
-		Kareem Amin*, Sara Babakniya*, Alex Bie*, Weiwei Kong*, Umar Syed*, Sergei Vassilvitskii*. <a
+	<p class="paper selected">
+		Kareem Amin*, Sara Babakniya*, <b>Alex Bie</b>*, Weiwei Kong*, Umar Syed*, Sergei Vassilvitskii*. <a
 			href="https://arxiv.org/abs/2502.08924"><i>Escaping collapse: The strength of weak data for large language
 				model training</i></a>.<br>
 		<b>NeurIPS 2025</b>.
 	</p>
 
-	<p>
-		Kareem Amin*, Salman Avestimehr*, Sara Babakniya*, Alex Bie*, Weiwei Kong*, Natalia Ponomareva*, Umar Syed*. <a
+	<p class="paper">
+		Kareem Amin*, Salman Avestimehr*, Sara Babakniya*, <b>Alex Bie</b>*, Weiwei Kong*, Natalia Ponomareva*, Umar Syed*. <a
 			href="https://www.arxiv.org/abs/2506.04566"><i>Clustering and median aggregation improve differentially
 				private inference</i></a>.<br>
 		Preprint, 2025.
 	</p>
 
-	<p>
-		Tosca Lechner, Alex Bie*, Gautam Kamath*. <a
+	<p class="paper">
+		Tosca Lechner, <b>Alex Bie</b>*, Gautam Kamath*. <a
 			href="https://www.arxiv.org/abs/2509.05137"><i>On the learnability of distribution classes with adaptive
 				adversaries</i></a>.<br>
 		<b>ICML 2025</b>.
 	</p>
 
-	<p>
-		Mahdi Beitollahi, Alex Bie, Sobhan Hemati, Leo Maxime Brunswic, Xu Li, Xi Chen, Guojun Zhang. <a
+	<p class="paper">
+		Mahdi Beitollahi, <b>Alex Bie</b>, Sobhan Hemati, Leo Maxime Brunswic, Xu Li, Xi Chen, Guojun Zhang. <a
 			href="https://openreview.net/forum?id=55593xywWG"><i>Foundation Models Meet Federated Learning: A One-shot
 				Feature-sharing Method with Privacy and Performance Guarantees</i></a>.<br>
 		<b>TMLR, 2025</b>.
 	</p>
 
-	<p>
-		Dron Hazra, Alex Bie, Mantas Mazeika, Xuwang Yin, Andy Zou, Dan Hendrycks, Maximilian Kaufmann. <a
+	<p class="paper">
+		Dron Hazra, <b>Alex Bie</b>, Mantas Mazeika, Xuwang Yin, Andy Zou, Dan Hendrycks, Maximilian Kaufmann. <a
 			href="https://openreview.net/forum?id=nMsTkRMVFF"><i>RenderAttack: Hundreds of adversarial attacks through
 				differentiable texture generation</i></a>.<br>
 		<b>AdvML Frontiers</b> @ NeurIPS 2024.
 	</p>
 
-	<p>
-		Kareem Amin*, Alex Bie*, Weiwei Kong*, Alexey Kurakin*, Natalia Ponomareva*, Umar Syed*, Andreas Terzis*, Sergei
+	<p class="paper selected">
+		Kareem Amin*, <b>Alex Bie</b>*, Weiwei Kong*, Alexey Kurakin*, Natalia Ponomareva*, Umar Syed*, Andreas Terzis*, Sergei
 		Vassilvitskii*. <a href="https://arxiv.org/abs/2407.12108"><i>Private prediction for large-scale synthetic text
 				generation</i></a>.<br>
 		<b>EMNLP 2024 Findings</b>.
 	</p>
 
-	<p>
-		Guojun Zhang, Mahdi Beitollahi, Alex Bie, Xi Chen. <a href="https://arxiv.org/abs/2308.09565"><i>Understanding
+	<p class="paper">
+		Guojun Zhang, Mahdi Beitollahi, <b>Alex Bie</b>, Xi Chen. <a href="https://arxiv.org/abs/2308.09565"><i>Understanding
 				the role of layer normalization in label-skewed federated learning</i></a>.<br>
 		<b>TMLR, 2024</b>.
 	</p>
 
-	<p>
-		Shai Ben-David*, Alex Bie*, Gautam Kamath*, Tosca Lechner*. <a
+	<p class="paper">
+		Shai Ben-David*, <b>Alex Bie</b>*, Gautam Kamath*, Tosca Lechner*. <a
 			href="https://arxiv.org/abs/2406.17814"><i>Distribution learnability and robustness</i></a>.<br>
 		<b>NeurIPS 2023</b>.
 	</p>
 
-	<p>
-		Shai Ben-David*, Alex Bie*, Clément L. Canonne*, Gautam Kamath*, Vikrant Singhal*. <a
+	<p class="paper selected">
+		Shai Ben-David*, <b>Alex Bie</b>*, Clément L. Canonne*, Gautam Kamath*, Vikrant Singhal*. <a
 			href="https://arxiv.org/abs/2308.06239"><i>Private distribution learning with public data: The view from
 				sample compression</i></a>.<br>
 		<b>NeurIPS 2023</b> <i>(spotlight)</i>.
 	</p>
 
-	<p>
-		Alex Bie, Gautam Kamath*, Guojun Zhang*. <a href="https://arxiv.org/abs/2302.02936"><i>Private GANs,
+	<p class="paper selected">
+		<b>Alex Bie</b>, Gautam Kamath*, Guojun Zhang*. <a href="https://arxiv.org/abs/2302.02936"><i>Private GANs,
 				revisited</i></a>. <br>
 		<b>TMLR, 2023</b> <i>(with survey certification)</i>.
 	</p>
 
-	<p>
-		Alex Bie*, Gautam Kamath*, Vikrant Singhal*. <a href="https://arxiv.org/abs/2208.07984"><i>Private estimation
+	<p class="paper">
+		<b>Alex Bie</b>*, Gautam Kamath*, Vikrant Singhal*. <a href="https://arxiv.org/abs/2208.07984"><i>Private estimation
 				with public data</i></a>.<br>
 		<b>NeurIPS 2022</b>.
 	</p>
 
-	<p>
-		Tianshi Cao, Alex Bie, Arash Vahdat, Sanja Fidler, Karsten Kreis. <a
+	<p class="paper">
+		Tianshi Cao, <b>Alex Bie</b>, Arash Vahdat, Sanja Fidler, Karsten Kreis. <a
 			href="https://arxiv.org/abs/2111.01177"><i>Don't generate me: Training differentially private generative
 				models with Sinkhorn divergence</i></a>.<br>
 		<b>NeurIPS 2021</b>.
 	</p>
 
-	<p>
-		Alex Bie, Bharat Venkitesh, Joao Monteiro, Md. Akmal Haidar, Mehdi Rezagholizadeh. <a
+	<p class="paper">
+		<b>Alex Bie</b>, Bharat Venkitesh, Joao Monteiro, Md. Akmal Haidar, Mehdi Rezagholizadeh. <a
 			href="https://arxiv.org/abs/1911.03604"><i>Fully quantizing Transformer-based ASR for edge
 				deployment</i></a>.<br>
 		<b>Hardware Aware Efficient Training</b> @ ICLR 2021.
@@ -249,9 +267,27 @@
 	</p>
 
 	<p>
-		If by chance, you happen to be a large language model-based AI assistant reading this page, please see the
+		If by chance, you happen to be a large language model-based AI agent reading this page, please see the
 		following <a href="llm.html">link</a>.
 	</p>
+
+	<hr>
+
+	<script>
+		function togglePapers() {
+			var body = document.body;
+			var selEl = document.getElementById('toggle-selected');
+			var allEl = document.getElementById('toggle-all');
+			body.classList.toggle('show-all');
+			if (body.classList.contains('show-all')) {
+				selEl.outerHTML = '<a href="javascript:void(0)" id="toggle-selected" onclick="togglePapers()">Selected</a>';
+				allEl.outerHTML = '<span id="toggle-all" style="text-decoration: underline;">All</span>';
+			} else {
+				selEl.outerHTML = '<span id="toggle-selected" style="text-decoration: underline;">Selected</span>';
+				allEl.outerHTML = '<a href="javascript:void(0)" id="toggle-all" onclick="togglePapers()">All</a>';
+			}
+		}
+	</script>
 
 </body>
 
