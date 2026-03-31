@@ -3,6 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!--fonts-->
 	<link rel="stylesheet" href="fonts/Sans/cmun-sans.css">
@@ -30,7 +31,7 @@
 			}
 
 			#sidebar img {
-				height: 150px;
+				height: 200px;
 			}
 
 			#sidebar-info h1 {
@@ -42,6 +43,13 @@
 			body {
 				margin: 20px;
 				max-width: none;
+			}
+		}
+
+		@media (max-width: 480px) {
+			#sidebar {
+				flex-direction: column;
+				text-align: center;
 			}
 		}
 
