@@ -105,12 +105,84 @@
 			margin-top: -12px;
 		}
 
+		.section-heading {
+			display: flex;
+			justify-content: space-between;
+			align-items: baseline;
+			gap: 16px;
+		}
+
+		.news-heading {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+		}
+
+		.news-list {
+			margin-top: 0;
+			margin-bottom: 0;
+			padding-left: 1.35rem;
+		}
+
+		.news-item {
+			line-height: 20pt;
+		}
+
+		.news-item + .news-item {
+			margin-top: 4px;
+		}
+
+		.news-icon {
+			width: 1.7rem;
+			height: 1.7rem;
+			flex: 0 0 auto;
+		}
+
+		.news-date {
+			color: #888;
+			font-variant-numeric: tabular-nums;
+			white-space: nowrap;
+		}
+
+		.view-toggle {
+			padding: 0;
+			border: 0;
+			background: none;
+			color: #0000ee;
+			font: inherit;
+			cursor: pointer;
+		}
+
+		.view-toggle:hover,
+		.view-toggle:focus-visible {
+			text-decoration: underline;
+		}
+
+		.view-toggle[aria-pressed="true"] {
+			color: inherit;
+			text-decoration: underline;
+			cursor: default;
+		}
+
+		.paper-note {
+			font-size: 18px;
+			white-space: nowrap;
+		}
+
 		.paper:not(.selected) {
 			display: none;
 		}
 
 		body.show-all .paper:not(.selected) {
 			display: block;
+		}
+
+		@media (max-width: 675px) {
+			.section-heading {
+				align-items: flex-start;
+				flex-direction: column;
+				gap: 4px;
+			}
 		}
 	</style>
 
@@ -144,37 +216,47 @@
 
 	<p> I am a researcher at Google, where I work on differentially private synthetic data.</p>
 
-
-	<div style="padding: 16px; background: #f8f9fa; border-left: 3px solid #d73027; border-radius: 3px;">
-		<p style="margin: 0;"><img src="new.png" alt="New"
-				style="height: 2.2rem; margin-right: 2px; vertical-align: middle;"> We released ContinuousBench,
-				a new benchmark for DP synthetic data that is hard at ε=100. 
-				See Peihan's excellent <a href="https://peihanliu.com/posts/continuousbench.html">blog post</a> for more.</p>
-	</div>
-
-
-	<div style="padding: 16px; background: #f8f9fa; border-left: 3px solid #d73027; border-radius: 3px;">
-		<p style="margin: 0;"><img src="new.png" alt="New"
-				style="height: 2.2rem; margin-right: 2px; vertical-align: middle;"> Check out our <a
-				href="https://dpfy-your-data.github.io/">ICML tutorial</a> and companion <a
-				href="https://arxiv.org/abs/2512.03238">survey article</a> on differentially private synthetic data!</p>
-	</div>
-
 	<p>
-		I did my undergrad and master's in CS at Waterloo, where I studied privacy-preserving machine learning under the advice of
-		Gautam Kamath and Shai Ben-David.
-		My thesis was <i><a href="https://uwspace.uwaterloo.ca/handle/10012/20254">Private distribution learning with
-				public data</a></i>.
+		I studied CS at Waterloo, under the advice of <a href="https://www.gautamkamath.com/">Gautam Kamath</a> and <a
+			href="https://cs.uwaterloo.ca/~shai/">Shai Ben-David</a>. My master's thesis was <i><a
+				href="https://uwspace.uwaterloo.ca/handle/10012/20254">Private distribution learning with public data</a></i>.
 	</p>
 
 	<hr>
 
-	<h3 style="display: flex; justify-content: space-between; align-items: baseline;"> <span>(<span id="toggle-selected" style="text-decoration: underline;">Selected</span>/<a href="javascript:void(0)" id="toggle-all" onclick="togglePapers()">All</a>) Papers</span> <i style="font-size: 18px;">(*) denotes alphabetical order.</i> </h3>
+	<section aria-labelledby="news-heading">
+		<h3 class="news-heading" id="news-heading">
+			<span>News</span>
+			<img class="news-icon" src="new.png" alt="">
+			<span>(<button class="view-toggle" id="toggle-news-recent" type="button" aria-pressed="true"
+					onclick="setNewsView('recent')">Recent</button>/<button class="view-toggle" id="toggle-news-all" type="button"
+					aria-pressed="false" onclick="setNewsView('all')">All</button>)</span>
+		</h3>
+		<ul class="news-list">
+			<li class="news-item"><time class="news-date" datetime="2026-06-08" data-short-date="Jun">[Jun]</time> We released ContinuousBench,
+				a new benchmark for DP synthetic data that is hard at ε=100. See Peihan's excellent <a
+					href="https://peihanliu.com/posts/continuousbench.html">blog post</a> for more.</li>
+			<li class="news-item"><time class="news-date" datetime="2026-02-06" data-short-date="Feb">[Feb]</time> Check out our <a
+					href="https://dpfy-your-data.github.io/">ICML tutorial</a> and companion <a
+					href="https://arxiv.org/abs/2512.03238">survey article</a> on differentially private synthetic data!</li>
+		</ul>
+	</section>
+
+	<hr>
+
+	<section aria-labelledby="papers-heading">
+		<h3 class="section-heading" id="papers-heading">
+			<span>Papers (<button class="view-toggle" id="toggle-selected" type="button" aria-pressed="true"
+					onclick="setPaperView('selected')">Selected</button>/<button class="view-toggle" id="toggle-all" type="button"
+					aria-pressed="false" onclick="setPaperView('all')">All</button>)</span>
+			<i class="paper-note">(*) denotes alphabetical order.</i>
+		</h3>
 
 	<p class="paper selected">
 		<a href="https://arxiv.org/abs/2606.01849"><i>ContinuousBench: Can differentially private synthetic text improve capabilities?</i></a><br>
 		Peihan Liu, Lucas Rosenblatt, Weiwei Kong, Natalia Ponomareva, Gautam Kamath, Rachel Cummings, Roxana Geambasu, Yu Gan, Lillian Tsai, <b>Alex Bie</b>.<br>
-		<b>TPDP 2026</b> <i>(oral)</i>. <i><a href="https://peihanliu.com/posts/continuousbench.html">Blog post</a></i>.
+		<i><a href="https://peihanliu.com/posts/continuousbench.html">Blog post</a></i>. <b>TPDP 2026</b> <i>(oral)</i>;
+		<b>COLM 2026 Workshop on Responsibly Enabling Data for Foundation Models</b> <i>(oral)</i>.
 	</p>
 
 	<p class="paper">
@@ -195,7 +277,7 @@
 		Natalia Ponomareva, Zheng Xu, H. Brendan McMahan, Peter Kairouz, Lucas Rosenblatt, Vincent Cohen-Addad,
 		Cristóbal Guzmán, Ryan McKenna, Galen Andrew, <b>Alex Bie</b>, Da Yu, Alex Kurakin, Morteza Zadimoghaddam, Sergei
 		Vassilvitskii, Andreas Terzis.<br>
-		To appear in <b>JAIR</b>, 2026.
+		<b>JAIR</b>, 2026.
 	</p>
 
 	<p class="paper selected">
@@ -288,6 +370,7 @@
 		<b>Alex Bie</b>, Bharat Venkitesh, Joao Monteiro, Md. Akmal Haidar, Mehdi Rezagholizadeh.<br>
 		<b>Hardware Aware Efficient Training</b> @ ICLR 2021.
 	</p>
+	</section>
 
 	<hr>
 
@@ -304,19 +387,34 @@
 	<hr>
 
 	<script>
-		function togglePapers() {
-			var body = document.body;
-			var selEl = document.getElementById('toggle-selected');
-			var allEl = document.getElementById('toggle-all');
-			body.classList.toggle('show-all');
-			if (body.classList.contains('show-all')) {
-				selEl.outerHTML = '<a href="javascript:void(0)" id="toggle-selected" onclick="togglePapers()">Selected</a>';
-				allEl.outerHTML = '<span id="toggle-all" style="text-decoration: underline;">All</span>';
-			} else {
-				selEl.outerHTML = '<span id="toggle-selected" style="text-decoration: underline;">Selected</span>';
-				allEl.outerHTML = '<a href="javascript:void(0)" id="toggle-all" onclick="togglePapers()">All</a>';
-			}
+		function formatNewsDates() {
+			var currentYear = new Date().getFullYear();
+			document.querySelectorAll('.news-date').forEach(function (time) {
+				var year = Number(time.getAttribute('datetime').slice(0, 4));
+				time.textContent = '[' + time.dataset.shortDate + (year === currentYear ? '' : ' ' + year) + ']';
+			});
 		}
+
+		function setNewsView(view) {
+			var showAll = view === 'all';
+			document.querySelectorAll('.news-item').forEach(function (item, index) {
+				item.hidden = !showAll && index >= 3;
+			});
+			document.getElementById('toggle-news-all').setAttribute('aria-pressed', showAll);
+			document.getElementById('toggle-news-recent').setAttribute('aria-pressed', !showAll);
+		}
+
+		function setPaperView(view) {
+			var showAll = view === 'all';
+			document.body.classList.toggle('show-all', showAll);
+			document.getElementById('toggle-all').setAttribute('aria-pressed', showAll);
+			document.getElementById('toggle-selected').setAttribute('aria-pressed', !showAll);
+		}
+
+		document.addEventListener('DOMContentLoaded', function () {
+			formatNewsDates();
+			setNewsView('recent');
+		});
 	</script>
 
 </body>
