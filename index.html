@@ -229,6 +229,7 @@
 					aria-pressed="false" onclick="setNewsView('all')">All</button>)</span>
 		</h3>
 		<ul class="news-list">
+			<li class="news-item"><time class="news-date" datetime="2026-10-20" data-short-date="Oct">[Oct]</time> Two new papers! (1) <a href="https://arxiv.org/abs/2610.28707">SimHack</a> by <a href="https://theaperdeng.github.io/">Junwei</a> predicts when reward hacking emerges in an RL recipe <em>before training</em>, using a simulator fit on small runs; we use it to find a recipe that hacks 97% later. (2) It turns out that <a href="https://arxiv.org/abs/2610.28878">actually, all learnable distribution classes are privately learnable</a>. The proof for the countable case fits in <a href="actually.pdf">&lt;1 page</a>.</li>
 			<li class="news-item"><time class="news-date" datetime="2026-10-13" data-short-date="Oct">[Oct]</time> Gemini 4 Argon is released! I joined GDM last month and worked on the <a href="https://storage.googleapis.com/deepmind-media/gemini/gemini_4_safety_report.pdf#page=210">coding agent prompt injection eval</a>, which Argon is starting to saturate 🙃...</li>
 			<li class="news-item"><time class="news-date" datetime="2026-06-08" data-short-date="Jun">[Jun]</time> We released ContinuousBench,
 				a new benchmark for DP synthetic data that is hard at ε=100. See Peihan's excellent <a
@@ -250,9 +251,21 @@
 		</h3>
 
 	<p class="paper selected">
+		<a href="https://arxiv.org/abs/2610.28707"><i>SimHack: Predicting the onset of detectable reward hacking before RL training</i></a><br>
+		Junwei Deng, <b>Alex Bie</b>*, Natalia Ponomareva*.<br>
+		Preprint, 2026.
+	</p>
+
+	<p class="paper selected">
+		<a href="https://arxiv.org/abs/2610.28878"><i>Actually, all learnable distribution classes are privately learnable</i></a><br>
+		Mohammad Afzali*, Hassan Ashtiani*, <b>Alex Bie</b>*, Gautam Kamath*, Peihan Liu*, Argyris Mouzakis*, Vikrant Singhal*.<br>
+		<i><a href="actually.pdf">Self-contained 3-pager of the countable case</a></i>. Preprint, 2026.
+	</p>
+
+	<p class="paper selected">
 		<a href="https://storage.googleapis.com/deepmind-media/gemini/gemini_4_safety_report.pdf"><i>Gemini 4 Argon Safety &amp; Security Report</i></a><br>
 		Many authors.<br>
-		<i><a href="https://storage.googleapis.com/deepmind-media/gemini/gemini_4_safety_report.pdf#page=203">Section on prompt injections</a></i>. 2026.
+		<i><a href="https://storage.googleapis.com/deepmind-media/gemini/gemini_4_safety_report.pdf#page=203">Our team's section on prompt injections (Section 6.1)</a></i>. 2026.
 	</p>
 
 	<p class="paper selected">
